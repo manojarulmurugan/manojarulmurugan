@@ -44,9 +44,9 @@ Here are some of my notable projects:
 - 🚖 **[Taxi Cab Fare Prediction](#)** - Competed in an **IIT Madras-mediated Kaggle contest**, achieving a **top 100 leaderboard ranking**. Implemented **hyperparameter tuning** and trained an optimized **Stacking Regression model** with **KNN, Random Forest, and Gradient Boosting algorithms**, attaining an **accuracy of 94%** to predict taxi-cab fare prices.
 
 ### 📊 GitHub Stats
-![Manoj's GitHub stats](https://github-readme-stats.vercel.app/api?username=manojarulmurugan&show_icons=true&theme=radical)
-
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=manojarulmurugan&layout=compact&theme=radical)
+
+![Manoj's GitHub stats](https://github-readme-stats.vercel.app/api?username=manojarulmurugan&show_icons=true&theme=radical)
 
 ### 👯‍♂️ Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manojarulmurugan/)
