@@ -45,6 +45,7 @@ Here are some of my notable projects:
 
 ### 📊 GitHub Stats
 ![Manoj's GitHub stats](https://github-readme-stats.vercel.app/api?username=manojarulmurugan&show_icons=true&theme=radical)
+
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=manojarulmurugan&layout=compact&theme=radical)
 
 ### 👯‍♂️ Connect with Me
