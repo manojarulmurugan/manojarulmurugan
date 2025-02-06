@@ -41,7 +41,7 @@ Here are some of my notable projects:
 
 - 🏥 **[Lumbar Spine Degenerative Condition Classification](https://github.com/manojarulmurugan/Lumbar-spine-degenerative-classification)** - Built a **3D Image Classification Model** using **Vision Transformers & YOLO** (Ranked **Top 8% in Kaggle Competition**). Currently working on further enhancements to improve model accuracy and generalization.
 
-- 🚖 **[Taxi Cab Fare Prediction](#)** - Competed in an **IIT Madras-mediated Kaggle contest**, achieving a **top 100 leaderboard ranking**. Implemented **hyperparameter tuning** and trained an optimized **Stacking Regression model** with **KNN, Random Forest, and Gradient Boosting algorithms**, attaining an **accuracy of 94%** to predict taxi-cab fare prices.
+- 🚖 **[Taxi Cab Fare Prediction](https://github.com/manojarulmurugan/Taxicab-Regression-Problem)** - Competed in an **IIT Madras-mediated Kaggle contest**, achieving a **top 100 leaderboard ranking**. Implemented **hyperparameter tuning** and trained an optimized **Stacking Regression model** with **KNN, Random Forest, and Gradient Boosting algorithms**, attaining an **accuracy of 94%** to predict taxi-cab fare prices.
 
 ### 📊 GitHub Stats
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=manojarulmurugan&layout=compact&theme=radical)
