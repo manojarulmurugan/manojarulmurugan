@@ -31,7 +31,7 @@ I am a first-year **Master's student in Data Science at the University of Wiscon
 ### 🚀 Projects
 Here are some of my notable projects:
 
-- 📈 **[Data-Driven Sales Forecasting and Customer Profiling](https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-HP-Sales-Data)** - Analyzed a **220,000-record HP Sales dataset**, performing **customer segmentation** based on product category, geographic location, and Customer Lifetime Value analysis to solve a real-world business problem. Forecasted product demand and revenue utilizing **ARIMA and LSTM**, achieving a **mean absolute error percentage of less than 1%**, showcasing expertise in predictive analytics and advanced modeling techniques.
+- 📈 **[Data-Driven Sales Forecasting and Customer Profiling](https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-Sales-Data)** - Analyzed a **370,000-record Sales dataset**, performing **customer segmentation** based on product category, geographic location, and Customer Lifetime Value analysis to solve a real-world business problem. Forecasted product demand and revenue utilizing **ARIMA and LSTM**, achieving a **mean absolute error percentage of less than 1%**, showcasing expertise in predictive analytics and advanced modeling techniques.
 
 - 💪 **[Customer Churn Prediction](#)** (Ongoing) - Developing a predictive model to analyze customer retention patterns and improve business strategies using **machine learning and data-driven insights**.
 
