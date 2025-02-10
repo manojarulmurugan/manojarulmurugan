@@ -1,4 +1,4 @@
-# 👋 Hello, I'm Manoj Arulmurugan!
+# Hey there, I'm Manoj Arulmurugan!
 
 ### 🎓 About Me
 I am a first-year **Master's student in Data Science at the University of Wisconsin-Madison**, passionate about extracting insights from data and building AI-powered solutions. My journey in data science is fueled by a strong foundation in statistics and machine learning.
