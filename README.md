@@ -33,7 +33,7 @@ Here are some of my notable projects:
 
 - 📈 **[Data-Driven Sales Forecasting and Customer Profiling](https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-Sales-Data)** - Analyzed a **370,000-record Sales dataset**, performing **customer segmentation** based on product category, geographic location, and Customer Lifetime Value analysis to solve a real-world business problem. Forecasted product demand and revenue utilizing **ARIMA and LSTM**, achieving a **mean absolute error percentage of less than 1%**, showcasing expertise in predictive analytics and advanced modeling techniques.
 
-- 💪 **[Customer Churn Prediction](#)** (Ongoing) - Developing a predictive model to analyze customer retention patterns and improve business strategies using **machine learning and data-driven insights**.
+- 💪 **[Customer Churn Prediction](https://github.com/manojarulmurugan/Customer-Churn-Prediction-HP-Sales-Data)** (Ongoing) - Developing a predictive model to analyze customer retention patterns and improve business strategies using **machine learning and data-driven insights**.
 
 - 🧠 **[Fall Detection System](https://github.com/manojarulmurugan/Fall-Detection)** - Built a **deep learning model (Convolutional LSTM, LRCN)** for real-time fall detection using video classification.
 
