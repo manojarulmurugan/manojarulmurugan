@@ -1,52 +1,98 @@
 # Hey there, I'm Manoj Arulmurugan!
 
-### 🎓 About Me
-I am a first-year **Master's student in Data Science at the University of Wisconsin-Madison**, passionate about extracting insights from data and building AI-powered solutions. My journey in data science is fueled by a strong foundation in statistics and machine learning.
+MS Data Science @ UW-Madison (May 2026) · Previously @ Calix & Shell India · OPT · Open to full-time DS / ML / AI roles
 
-- 🌚 I have experience working with structured, unstructured, and image data to analyze real-world problems.
-- 📚 Currently enhancing my skills through coursework in **Machine Learning, Statistical Methods & Modeling, Optimization, and Relational DBMS**.
-- 🛠 I build ML models with **TensorFlow and PyTorch** for **Computer Vision** applications. I also leverage **traditional machine learning techniques** to build **forecasting, classification, and regression models** for **business and finance problems**.
-- 💻 Proficient in **Python, SQL**, and **PowerBI**, with hands-on experience in classification, regression, and forecasting.
-- 🏆 Recognized for delivering data-driven solutions, including dashboards that drive measurable real-world impact.
-- 🔄 Currently interested in and actively learning more about **Natural Language Processing (NLP), Transformers, and Large Language Models (LLMs)**.
-- 🌐 Open to **AI, Deep Learning, and Machine Learning projects** that can have a **direct real-world impact**.
-- ☁️ Actively exploring **model deployment and cloud technologies in AWS and GCP**.
-- ⚽ In my free time, I **play and watch football (soccer)**, **run**, and **watch anime**.
+---
 
-### 🏠 My Tech Stack
+## About
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PowerBI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![C/C++](https://img.shields.io/badge/C/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-008080?style=for-the-badge&logo=python&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![Julia](https://img.shields.io/badge/Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white)
+I'm a data scientist who keeps getting drawn to the same class of problems: building models that actually work when a business depends on them.
 
-### 🚀 Projects
-Here are some of my notable projects:
+My background spans production ML at Calix (forecasting ensembles, Feature Stores on Snowflake), operational analytics at Shell India, and research-oriented work in LLMs and RAG systems. I'm most energized at the intersection of rigorous modeling and real-world deployment constraints — the part where "it works in a notebook" stops being enough.
 
-- 📈 **[Data-Driven Sales Forecasting and Customer Profiling](https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-Sales-Data)** - Analyzed a **370,000-record Sales dataset**, performing **customer segmentation** based on product category, geographic location, and Customer Lifetime Value analysis to solve a real-world business problem. Forecasted product demand and revenue utilizing **ARIMA and LSTM**, achieving a **mean absolute error percentage of less than 1%**, showcasing expertise in predictive analytics and advanced modeling techniques.
+Finishing my MS this May. Currently looking for full-time roles in Data Science, ML Engineering, or Applied AI.
 
-- 💪 **[Customer Churn Prediction](https://github.com/manojarulmurugan/Customer-Churn-Prediction-HP-Sales-Data)** (Ongoing) - Developing a predictive model to analyze customer retention patterns and improve business strategies using **machine learning and data-driven insights**.
+---
 
-- 🧠 **[Fall Detection System](https://github.com/manojarulmurugan/Fall-Detection)** - Built a **deep learning model (Convolutional LSTM, LRCN)** for real-time fall detection using video classification.
+## Experience
 
-- 💳 **[Credit Risk Analysis](https://github.com/manojarulmurugan/Credit-Profit-Risk-Analysis)** - Developed an ensemble model for **predicting credit risk**, achieving **97.7% accuracy**.
+**Machine Learning Intern — Calix, Inc.** *(Jun–Dec 2025, San Jose CA)*
+Built a centralized Feature Store on Snowflake (10+ sources, 100+ features) and a forecasting ensemble (SARIMA + LSTM) that improved accuracy ~50% over baseline. Shipped to production.
 
-- 🏥 **[Lumbar Spine Degenerative Condition Classification](https://github.com/manojarulmurugan/Lumbar-spine-degenerative-classification)** - Built a **3D Image Classification Model** using **Vision Transformers & YOLO** (Ranked **Top 8% in Kaggle Competition**). Currently working on further enhancements to improve model accuracy and generalization.
+**Operations Data Analyst — Shell India** *(Aug 2023–Aug 2024, Bangalore)*
+Owned analytics for B2C apps. Built PowerBI dashboards on a 10TB data lake, drove $250k in cost savings. Won the Shell Mobility Wall of Fame Award Q1 2024.
 
-- 🚖 **[Taxi Cab Fare Prediction](https://github.com/manojarulmurugan/Taxicab-Regression-Problem)** - Competed in an **IIT Madras-mediated Kaggle contest**, achieving a **top 100 leaderboard ranking**. Implemented **hyperparameter tuning** and trained an optimized **Stacking Regression model** with **KNN, Random Forest, and Gradient Boosting algorithms**, attaining an **accuracy of 94%** to predict taxi-cab fare prices.
+---
 
-### 📊 GitHub Stats
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=manojarulmurugan&layout=compact&theme=radical)
+## Featured Projects
 
-![Manoj's GitHub stats](https://github-readme-stats.vercel.app/api?username=manojarulmurugan&show_icons=true&theme=radical)
+### 🔍 Time-Aware RAG — Temporal Retrieval + Re-Ranking
+Built a RAG pipeline designed for "as-of" questions — where *when* matters as much as *what*.
+Fine-tuned Contriever with temporal hard negatives; built a faster MRAG re-ranker with sliding-window MaxSim + temporal decay.
+**Hit@1: 59% vs 40.4% baseline** on CAQA dataset.
+[→ View Project](https://github.com/manojarulmurugan)
+
+---
+
+### 🧠 Hallucination-Aware Steering for LLMs
+Reduced hallucination rate on GPT-Neo-2.7B from 64.6% → 55.5% (+9.1pp) by training a Logistic Regression Truthfulness Separator Vector on hidden states and building a lightweight MLP probe to adapt per-token steering strength.
+[→ View Project](https://github.com/manojarulmurugan)
+
+---
+
+### 🗺️ SquadPlanner — AI Trip Planning Agent
+LangChain + Gemini AI application with 6 custom tools, processing millions of Yelp records.
+Supports real-time flight/hotel APIs and budget fairness analysis for groups of 2–10 travelers.
+[→ View Project](https://github.com/manojarulmurugan)
+
+---
+
+### 📈 Sales Forecasting + Customer Churn
+ARIMA and LSTM forecasting on a 370k-record dataset with <5% error.
+Churn prediction with LightGBM at 87% accuracy. End-to-end from raw data to business insight.
+[→ View Project](https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-Sales-Data)
+
+---
+
+### 💳 Credit Risk Analysis
+Stacked ensemble (RF, Naive Bayes, SVM, XGBoost) on 30k loan records — 97.7% accuracy.
+Built for interpretability: actionable outputs on safe loans and profit optimization.
+[→ View Project](https://github.com/manojarulmurugan/Credit-Profit-Risk-Analysis)
+
+---
+
+## Work in Progress
+
+### 🛒 E-Commerce Recommendation System *(active)*
+Building a full-stack ML pipeline on a 70GB+ data lake using GCS, BigQuery, and Spark on Dataproc. The goal is a production-grade recommendation system with MLFlow for experiment tracking and a GCS-based model registry.
+Deliberately designed around real BigData constraints — not a toy dataset.
+
+---
+
+### 🗺️ SquadPlanner v2 — Expanding the Travel Agent *(active)*
+Enhancing the original LangChain + Gemini AI trip planner with Google Maps integration, broader location coverage, improved UI, and new MCP + API integrations. Building toward a more robust agentic architecture.
+
+---
+
+## Currently Learning
+
+- **Principles of Designing AI Agents** (Sam Bhagwat) — agentic architectures, MCP servers, tool design patterns
+- **Machine Learning in Production** (DeepLearning.ai) — MLOps, model monitoring, cloud deployment pipelines
+
+Completed: Deep Learning Specialization (DeepLearning.ai)
+
+---
+
+## Stack
+
+**Languages:** Python · SQL · R · Julia
+**ML/DL:** PyTorch · TensorFlow · Scikit-Learn · XGBoost · LightGBM · Hugging Face · Darts
+**LLM/AI:** LangChain · RAG · Transformers · Agentic AI · MCP
+**Data & Infra:** Snowflake · GCS · BigQuery · Spark · dbt · MLFlow · ETL · Feature Stores · PowerBI · Docker
+
+---
+
+📬 manojarulmurugan@gmail.com · [LinkedIn](https://www.linkedin.com/in/manojarulmurugan/)
 
 ### 👯‍♂️ Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manojarulmurugan/)
