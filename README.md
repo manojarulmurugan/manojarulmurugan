@@ -46,6 +46,7 @@ My background spans **production ML at Calix** (forecasting ensembles, Feature S
 | 🗺️ [SquadPlanner](#-squadplanner) | AI trip planning agent with LangChain + Gemini | 6 tools · millions of Yelp records |
 | 📈 [Sales Forecasting + Churn](#-sales-forecasting--churn) | ARIMA/LSTM + LightGBM on 370k records | **<5% forecast error · 87% churn accuracy** |
 | 💳 [Credit Risk Analysis](#-credit-risk-analysis) | Stacked ensemble on 30k loan records | **97.7% accuracy** |
+| 🧩 [Fall Detection System](#-fall-detection-system) | ConvLSTM + LRCN on 46GB video data | **82% accuracy** |
 
 ---
 
@@ -60,7 +61,7 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 
 **📊 Hit@1: 59% (vs 40.4% baseline) on CAQA · In-domain: 84.9%**
 
-[→ View Project](https://github.com/manojarulmurugan)
+[→ View Project](https://github.com/manojarulmurugan/Time-Aware-Retrieval-Augmented-Generation)
 
 ---
 
@@ -73,7 +74,7 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 
 **📊 TruthfulQA on GPT-Neo-2.7B: 64.6% → 55.5% hallucination rate (+9.1pp improvement)**
 
-[→ View Project](https://github.com/manojarulmurugan)
+[→ View Project](https://github.com/manojarulmurugan/Probe-Controlled-TSV)
 
 ---
 
@@ -84,7 +85,7 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 - Real-time **flight & hotel API** integration + **budget fairness analysis** for groups of 2–10 travelers
 - Built an ETL pipeline processing the Yelp Dataset into a structured activities DB with semantic tagging
 
-[→ View Project](https://github.com/manojarulmurugan)
+[→ View Project](https://github.com/manojarulmurugan/AI-Squad-Planner)
 
 ---
 
@@ -105,9 +106,28 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 - Processed **30,000 loan records** to predict credit risk using a **stacked ensemble** (RF + Naive Bayes + SVM + XGBoost)
 - Delivered actionable insights on safe loans and optimized profit potential for financial institutions
 
-**📊 97.7% accuracy**
+**📊 97.7% test set accuracy**
 
 [→ View Project](https://github.com/manojarulmurugan/Credit-Profit-Risk-Analysis)
+
+---
+
+### 🧩 Fall Detection System
+> *Deep Learning · Video Classification · Computer Vision*
+
+- Built a real-time fall detection system processing **46GB of video data** using **Convolutional LSTM** and **Long-term Recurrent Convolutional Network (LRCN)** architectures
+- Engineered to handle temporal dependencies across video frames for reliable action recognition
+
+**📊 82% test set accuracy**
+
+[→ View Project](https://github.com/manojarulmurugan/Fall-Detection)
+
+---
+
+## 📄 Publication
+
+**An Efficient Vehicle Detection and Shadow Removal Using Gaussian Mixture Models with Blob Analysis for Machine Vision Application**
+*Published research on computer vision techniques for vehicle detection in challenging lighting conditions*
 
 ---
 
@@ -174,9 +194,9 @@ Expanding the original trip planner with **Google Maps integration**, broader lo
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=manojarulmurugan&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="165"/>
+<img src="https://streak-stats.demolab.com?user=manojarulmurugan&theme=tokyonight&hide_border=true" height="165"/>
 &nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manojarulmurugan&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="165"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=manojarulmurugan&theme=tokyonight" height="165"/>
 
 </div>
 
