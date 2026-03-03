@@ -1,6 +1,12 @@
-# Hey there, I'm Manoj Arulmurugan!
+<div align="center">
 
-MS Data Science @ UW-Madison (May 2026) · Previously @ Calix & Shell India · OPT · Open to full-time DS / ML / AI roles
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=120&section=header&text=Manoj%20Arulmurugan&fontSize=36&fontColor=ffffff&fontAlignY=65&desc=Data%20Scientist%20%7C%20ML%20Engineer%20%7C%20UW-Madison%20%E2%80%9826&descAlignY=85&descSize=14&descColor=aaaaaa" />
+
+</div>
+
+<br/>
+
+MS Data Science @ UW-Madison (May 2026) &nbsp;·&nbsp; Previously @ Calix & Shell India &nbsp;·&nbsp; OPT &nbsp;·&nbsp; Open to full-time DS / ML / AI roles
 
 ---
 
@@ -85,17 +91,52 @@ Completed: Deep Learning Specialization (DeepLearning.ai)
 
 ## Stack
 
-**Languages:** Python · SQL · R · Julia
-**ML/DL:** PyTorch · TensorFlow · Scikit-Learn · XGBoost · LightGBM · Hugging Face · Darts
-**LLM/AI:** LangChain · RAG · Transformers · Agentic AI · MCP
-**Data & Infra:** Snowflake · GCS · BigQuery · Spark · dbt · MLFlow · ETL · Feature Stores · PowerBI · Docker
+**Core**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+
+**ML / DL**
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=flat-square&logo=xgboost&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
+
+**LLM / AI**
+
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+
+**Data & Infra**
+
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![PowerBI](https://img.shields.io/badge/PowerBI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
 
 ---
 
-📬 manojarulmurugan@gmail.com · [LinkedIn](https://www.linkedin.com/in/manojarulmurugan/)
+## GitHub Stats
 
-### 👯‍♂️ Connect with Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manojarulmurugan/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manojarulmurugan@gmail.com)
+<div align="center">
 
-🚀 **Always open to collaborate and build something amazing in AI & Data Science!**
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=manojarulmurugan&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff" />
+&nbsp;&nbsp;
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=manojarulmurugan&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" />
+
+</div>
+
+---
+
+<div align="center">
+
+📬 manojarulmurugan@gmail.com &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/manojarulmurugan/)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=80&section=footer" />
+
+</div>
