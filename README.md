@@ -15,7 +15,7 @@
 
 ML and AI person at heart, with a foundation in production systems and an eye on where the field is heading.
 
-Data makes real-world problems tangible to me. When I can see a problem through numbers, patterns, and structure, solving it becomes genuinely exciting — and that's what keeps pulling me deeper into this field.
+Data makes real-world problems tangible to me. When I can see a problem through numbers, patterns, and structure, solving it becomes genuinely exciting, and that's what keeps pulling me deeper into this field.
 
 I care about the full arc: from modeling to deployment, from classical ML to agentic systems and LLMs. I've shipped real ML systems in industry, worked across time-series, deep learning, and retrieval-based AI, and I'm actively building in MLOps, NLP, and agentic AI because that's where things are getting interesting.
 
@@ -25,17 +25,17 @@ I care about the full arc: from modeling to deployment, from classical ML to age
 
 ## 💼 Experience
 
-### 🔷 Machine Learning Intern — Calix, Inc. *(Jun–Dec 2025 · San Jose, CA)*
+### 🔷 Machine Learning Intern @ Calix, Inc. *(Jun–Dec 2025 · San Jose, CA)*
 - Architected a centralized **Feature Store on Snowflake** integrating **10+ data sources** and **100+ engineered features**
-- Built a forecasting ensemble (account-level regression + **SARIMA + LSTM**) — achieved **~50% improvement in forecast accuracy** over baseline. **Shipped to production.**
-- Applied **Genetic Algorithm-based feature selection** — reduced dimensionality by **~80%**
+- Built a forecasting ensemble (account-level regression + **SARIMA + LSTM**), achieving **~50% improvement in forecast accuracy** over baseline. **Shipped to production.**
+- Applied **Genetic Algorithm-based feature selection**, reducing dimensionality by **~80%**
 - Optimized pipelines to cut model runtime **~30%** to meet real warehouse cost and timeout constraints
 
-### 🔷 Operations Data Analyst — Shell India *(Aug 2023–Aug 2024 · Bangalore)*
+### 🔷 Operations Data Analyst @ Shell India *(Aug 2023–Aug 2024 · Bangalore)*
 - Owned operational analytics for B2C apps; cut team workload **50%** through process improvements
-- Built **PowerBI dashboards** on a **10TB data lake** via SQL — drove **$250,000 in cost savings**
+- Built **PowerBI dashboards** on a **10TB data lake** via SQL, driving **$250,000 in cost savings**
 - Engineered automated **ETL pipelines**, accelerating data processing **3x**
-- 🏆 **Shell Mobility Wall of Fame Award — Q1 2024**
+- 🏆 **Shell Mobility Wall of Fame Award, Q1 2024**
 
 ---
 
@@ -52,7 +52,7 @@ I care about the full arc: from modeling to deployment, from classical ML to age
 
 ---
 
-### 🔍 Time-Aware RAG — Temporal Retrieval + Re-Ranking
+### 🔍 Time-Aware RAG: Temporal Retrieval + Re-Ranking
 > *Retrieval-Augmented Generation · NLP · Information Retrieval*
 
 Most RAG systems ignore *when* a fact was true. This one doesn't.
@@ -70,7 +70,7 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 ### 🧠 Hallucination-Aware Steering for LLMs
 > *LLM Safety · Interpretability · Hallucination Mitigation*
 
-- Trained a **Logistic Regression Truthfulness Separator Vector (TSV)** on hidden states — replacing centroid/OT steering
+- Trained a **Logistic Regression Truthfulness Separator Vector (TSV)** on hidden states, replacing centroid/OT steering
 - Built a lightweight **MLP hallucination-risk probe** to adapt per-token steering strength, capped to prevent logit explosion
 - Steered only **~57% of tokens**, keeping fluency intact
 
@@ -80,7 +80,7 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 
 ---
 
-### 🗺️ SquadPlanner — AI Trip Planning Agent
+### 🗺️ SquadPlanner: AI Trip Planning Agent
 > *LLM Agents · LangChain · Gemini AI*
 
 - **6 custom tools** processing millions of Yelp records for personalized itineraries
@@ -94,9 +94,9 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 ### 📈 Sales Forecasting + Customer Churn
 > *Time-Series · Classification · Business Analytics*
 
-- **ARIMA + LSTM** forecasting on a **370,000-record** sales dataset — **<5% forecast error**
+- **ARIMA + LSTM** forecasting on a **370,000-record** sales dataset with **<5% forecast error**
 - Applied ECDF for churn definition and customer lifecycle analysis
-- **LightGBM + RandomForest** churn prediction — **87% accuracy**
+- **LightGBM + RandomForest** churn prediction at **87% accuracy**
 
 [→ View Project](https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-Sales-Data)
 
@@ -131,14 +131,14 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 ### 🛒 E-Commerce Recommendation System *(active)*
 > *BigData · GCP · MLOps*
 
-Building a production-grade recommendation pipeline on a **70GB+ data lake** — GCS Storage, BigQuery, Spark on Dataproc — with **MLFlow** for experiment tracking and model registry. Designed around real BigData constraints, not a toy dataset.
+Building a production-grade recommendation pipeline on a **70GB+ data lake** using GCS Storage, BigQuery, and Spark on Dataproc, with **MLFlow** for experiment tracking and model registry. Designed around real BigData constraints, not a toy dataset.
 
 ---
 
 ### 🗺️ SquadPlanner v2 *(active)*
 > *Agentic AI · MCP · Google Maps API*
 
-Expanding the original trip planner with **Google Maps integration**, broader location coverage, improved UI, and new **MCP + API integrations** — pushing toward a more robust agentic architecture.
+Expanding the original trip planner with **Google Maps integration**, broader location coverage, improved UI, and new **MCP + API integrations**, pushing toward a more robust agentic architecture.
 
 ---
 
@@ -146,8 +146,8 @@ Expanding the original trip planner with **Google Maps integration**, broader lo
 
 | Course / Resource | Focus |
 |---|---|
-| *Principles of Designing AI Agents* — Sam Bhagwat | Agentic architectures, MCP servers, tool design |
-| *Machine Learning in Production* — DeepLearning.ai | MLOps, model monitoring, cloud deployment |
+| *Principles of Designing AI Agents* by Sam Bhagwat | Agentic architectures, MCP servers, tool design |
+| *Machine Learning in Production* by DeepLearning.ai | MLOps, model monitoring, cloud deployment |
 
 ✅ **Completed:** Deep Learning Specialization (DeepLearning.ai)
 
@@ -187,7 +187,7 @@ Expanding the original trip planner with **Google Maps integration**, broader lo
 
 ## ⚡ Beyond the Code
 
-When I'm not building something, I'm following football, the NBA, or cricket more closely than I probably should — or out running to balance it all out.
+When I'm not building something, I'm following football, the NBA, or cricket more closely than I probably should, or out running to balance it all out.
 
 ---
 
