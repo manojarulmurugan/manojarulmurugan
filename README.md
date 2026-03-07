@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0575E6,100:00c6ff&height=130&section=header&text=Manoj%20Arulmurugan&fontSize=38&fontColor=ffffff&fontAlignY=60&desc=Data%20Scientist%20%7C%20ML%20Engineer%20%7C%20UW-Madison%20%2726&descAlignY=80&descSize=15&descColor=dde8ff" />
 
-### 📍 MS Data Science @ UW-Madison (May 2026) &nbsp;·&nbsp; Previously @ Calix & Shell India &nbsp;·&nbsp; OPT &nbsp;·&nbsp; Open to full-time roles
+### 📍 MS Data Science @ UW-Madison (May 2026) &nbsp;·&nbsp; Previously @ Calix & Shell India &nbsp;·&nbsp; Open to full-time roles
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manojarulmurugan/)
 [![Gmail](https://img.shields.io/badge/Gmail-manojarulmurugan@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:manojarulmurugan@gmail.com)
@@ -13,9 +13,11 @@
 
 ## 👋 About Me
 
-I'm a data scientist who keeps getting drawn to the same class of problems: **building models that actually work when a business depends on them.**
+ML and AI person at heart, with a foundation in production systems and an eye on where the field is heading.
 
-My background spans **production ML at Calix** (forecasting ensembles, Feature Stores on Snowflake), **operational analytics at Shell India**, and research-oriented work in **LLMs, RAG systems, and Agentic AI**. I'm most energized at the intersection of rigorous modeling and real-world deployment constraints — the part where *"it works in a notebook"* stops being enough.
+Data makes real-world problems tangible to me. When I can see a problem through numbers, patterns, and structure, solving it becomes genuinely exciting — and that's what keeps pulling me deeper into this field.
+
+I care about the full arc: from modeling to deployment, from classical ML to agentic systems and LLMs. I've shipped real ML systems in industry, worked across time-series, deep learning, and retrieval-based AI, and I'm actively building in MLOps, NLP, and agentic AI because that's where things are getting interesting.
 
 > 🎓 Finishing my MS this May. Actively looking for full-time roles in **Data Science, ML Engineering, or Applied AI**.
 
@@ -124,13 +126,6 @@ Most RAG systems ignore *when* a fact was true. This one doesn't.
 
 ---
 
-## 📄 Publication
-
-**An Efficient Vehicle Detection and Shadow Removal Using Gaussian Mixture Models with Blob Analysis for Machine Vision Application**
-*Published research on computer vision techniques for vehicle detection in challenging lighting conditions*
-
----
-
 ## 🔧 Work in Progress
 
 ### 🛒 E-Commerce Recommendation System *(active)*
@@ -187,6 +182,19 @@ Expanding the original trip planner with **Google Maps integration**, broader lo
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![PowerBI](https://img.shields.io/badge/PowerBI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+
+---
+
+## ⚡ Beyond the Code
+
+When I'm not building something, I'm following football, the NBA, or cricket more closely than I probably should — or out running to balance it all out.
+
+---
+
+## 📄 Publication
+
+**An Efficient Vehicle Detection and Shadow Removal Using Gaussian Mixture Models with Blob Analysis for Machine Vision Application**
+*Computer vision research on vehicle detection in challenging lighting conditions*
 
 ---
 
