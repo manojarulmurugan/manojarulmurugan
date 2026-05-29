@@ -16,13 +16,13 @@
 
 ML and AI person at heart, with a foundation in production systems and an eye on where the field is heading.
 
-Data makes real-world problems tangible to me. When I can see a problem through numbers, patterns, and structure, solving it becomes genuinely exciting — and that's what keeps pulling me deeper into this field.
+Data makes real-world problems tangible to me. When I can see a problem through numbers, patterns, and structure, solving it becomes genuinely exciting, and that's what keeps pulling me deeper into this field.
 
 I care about the full arc: from modeling to deployment, from classical ML to agentic systems and LLMs. I've shipped real ML systems in industry, worked across time-series, deep learning, and retrieval-based AI, and I'm actively building in MLOps, NLP, and agentic AI because that's where things are getting interesting.
 
 > Finishing my MS this May. Actively looking for full-time roles in **Data Science, ML Engineering, or Applied AI**.
 
-**Currently exploring:** LLM fine-tuning with LoRA and QLoRA — working on an early idea. Also going deeper on inference engineering and GPU optimization.
+**Currently exploring:** LLM fine-tuning with LoRA and QLoRA, working on an early idea. Also going deeper on inference engineering and GPU optimization.
 
 ---
 
@@ -113,7 +113,7 @@ End-to-end production recommendation system on the REES46 eCommerce dataset (288
 - Scaling from 500k → 1M users produced a consistent **+2.7% NDCG@20** gain
 - **FastAPI serving on Cloud Run** with FAISS ANN search (<500ms); automated concept-drift retraining via Cloud Scheduler + Vertex AI when rolling NDCG@20 drops >15%
 - **MLflow** experiment tracking; live distribution drift monitor (Jensen-Shannon divergence)
-- SASRec attempted 5 times — all failed on short-session data. Documented as a negative result with literature backing
+- SASRec attempted 5 times; all failed on short-session data. Documented as a negative result with literature backing
 
 | Metric | GRU4Rec V9 | T4Rec XLNet (published) | Popularity baseline |
 |---|---|---|---|
@@ -190,7 +190,7 @@ Completed: Deep Learning Specialization (DeepLearning.ai)
 
 ## Beyond the Code
 
-When I'm not building something, I'm following football, the NBA, or cricket more closely than I probably should — or out running to balance it all out.
+When I'm not building something, I'm following football, the NBA, or cricket more closely than I probably should, or out running to balance it all out.
 
 ---
 
