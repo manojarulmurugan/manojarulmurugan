@@ -171,12 +171,12 @@ Reframed from the standard lender accept/reject framing — which hits a structu
 | Course / Book | Provider |
 |---|---|
 | Principles of Designing AI Agents | Sam Bhagwat |
-| Neural Networks and Deep Learning | DeepLearning.ai |
-| Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | DeepLearning.ai |
-| Structuring Machine Learning Projects | DeepLearning.ai |
-| Convolutional Neural Networks | DeepLearning.ai |
-| Sequence Models | DeepLearning.ai |
-| Machine Learning in Production | DeepLearning.ai |
+| Neural Networks and Deep Learning | Dr. Andrew Ng |
+| Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | Dr. Andrew Ng |
+| Structuring Machine Learning Projects | Dr. Andrew Ng |
+| Convolutional Neural Networks | Dr. Andrew Ng |
+| Sequence Models | Dr. Andrew Ng |
+| Machine Learning in Production | Dr. Andrew Ng |
 | iOS & Swift - The Complete iOS App Development Bootcamp | Dr. Angela Yu |
 | Data Structures and Algorithms Bootcamp | Jonathan Rasmusson |
 
@@ -196,41 +196,54 @@ Reframed from the standard lender accept/reject framing — which hits a structu
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![Julia](https://img.shields.io/badge/Julia-9558B2?style=flat-square&logo=julia&logoColor=white)
 
 **ML / Deep Learning**
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=flat-square&logoColor=white)
+![LightGBM](https://img.shields.io/badge/LightGBM-02569B?style=flat-square&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
 
-**LLM / Agentic AI**
+**LLM / Agentic AI & Serving**
 
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logoColor=white)
+![vLLM](https://img.shields.io/badge/vLLM-000000?style=flat-square&logoColor=white)
+![FAISS](https://img.shields.io/badge/FAISS-4285F4?style=flat-square&logoColor=white)
 
-**Data & Infra**
+**Data & Cloud Infra**
 
-![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+
+**Also use:** Pandas, NumPy, Polars, Darts, Vertex AI, Feature Stores, ETL, Tableau, PowerBI, Git, A/B & hypothesis testing
 
 ---
 
 ## Beyond the Code
 
-When I'm not building something, I'm following football, the NBA, or cricket more closely than I probably should, or out running to balance it all out.
+Proud Tamil, from Chennai — if we ever meet, I'm taking you for masala dosa and filter coffee, no discussion. Sports are close to a religion: lifelong Messi/Barcelona fan still waiting on that Champions League, I bleed yellow for CSK, and I've recently gone deep into the NBA (Giannis and Wemby) and started following F1 and tennis. I play football myself whenever I can — box-to-box midfielder, chaos included — plus distance running, pickleball, and badminton, all played with more competitiveness than is probably healthy.
+
+Off the field: a huge Christopher Nolan fan, currently on both the *One Piece* anime and manga, and I read way more history and geopolitics than the average data scientist for fun — the patterns across civilizations aren't that different from how I think about data.
 
 ---
 
 ## Publication
 
-**An Efficient Vehicle Detection and Shadow Removal Using Gaussian Mixture Models with Blob Analysis for Machine Vision Application**
-*Computer vision research on vehicle detection in challenging lighting conditions*
+**[An Efficient Vehicle Detection and Shadow Removal Using Gaussian Mixture Models with Blob Analysis for Machine Vision Application](https://www.researchgate.net/publication/371638299_An_Efficient_Vehicle_Detection_and_Shadow_Removal_Using_Gaussian_Mixture_Models_with_Blob_Analysis_for_Machine_Vision_Application)**
+*SN Computer Science, 2023*
+
+Detects and counts vehicles from CCTV footage: morphological filtering removes noise, blob analysis + Gaussian Mixture Models detect and count vehicles per frame, benchmarked against YOLO.
 
 ---
 
