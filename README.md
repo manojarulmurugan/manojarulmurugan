@@ -20,9 +20,9 @@ Data makes real-world problems tangible to me. When I can see a problem through 
 
 I care about the full arc: from modeling to deployment, from classical ML to agentic systems and LLMs. I've shipped real ML systems in industry, worked across time-series, deep learning, and retrieval-based AI, and I'm actively building in MLOps, NLP, and agentic AI because that's where things are getting interesting.
 
-> Finishing my MS this May. Actively looking for full-time roles in **Data Science, ML Engineering, or Applied AI**.
+> Graduated with my MS this May. Actively looking for full-time roles in **Data Science, ML Engineering, or Applied AI**.
 
-**Currently exploring:** LLM fine-tuning with LoRA and QLoRA, working on an early idea. Also going deeper on inference engineering and GPU optimization.
+**Currently exploring:** A serving-regime study of how weight quantization, KV-cache quantization, and speculative decoding interact inside vLLM (see below) — the reproduction gate is passed, now building out the full interaction matrix. Also going deeper on LLM fine-tuning with LoRA and QLoRA.
 
 ---
 
@@ -45,12 +45,26 @@ I care about the full arc: from modeling to deployment, from classical ML to age
 
 | Project | What it does | Key Result |
 |---|---|---|
+| [Inference-Optimization Interaction Study](#inference-optimization-interaction-study-vllm) | Stacked quantization + speculative decoding interaction study in vLLM | Reproduction gate: **PASS** (in progress) |
 | [Time-Aware RAG](#time-aware-rag) | Temporal retrieval pipeline for "as-of" QA | **Hit@1: 59% vs 40.4% baseline** |
 | [Hallucination Steering](#hallucination-aware-steering) | LLM truthfulness via hidden-state steering | **Hallucination rate: 64.6% → 55.5%** |
 | [SquadPlanner](#squadplanner) | Stateful multi-agent trip planner with LangGraph | Live + deployed |
 | [RecoSys](#recosys) | Production-scale session-based recommender on GCP | **NDCG@20 = 0.2676, +5.1% vs XLNet** |
-| [Sales Forecasting + Churn](#sales-forecasting--churn) | ARIMA/LSTM + LightGBM on 370k records | **<5% forecast error · 87% churn accuracy** |
-| [Credit Risk Analysis](#credit-risk-analysis) | Stacked ensemble on 30k loan records | **97.7% accuracy** |
+| [Customer Churn & Retention Analytics](#customer-churn--retention-analytics) | XGBoost churn classification + retention analytics on 370k sales records | **87% accuracy, 0.89 precision** |
+| [Credit Profit & Risk Analysis](#credit-profit--risk-analysis) | Investor portfolio selection vs LendingClub grading | **+200–460 bp annualized return** |
+
+---
+
+### Inference-Optimization Interaction Study (vLLM)
+> *LLM Serving · Speculative Decoding · Quantization · GPU Optimization*
+
+**[View Project](https://github.com/manojarulmurugan/SpecDecoding-Study-vLLM-SGLang)**
+
+*In progress.* Practitioner guidance says weight quantization, KV-cache quantization, and speculative decoding stack into cleanly compounding serving speedups. Research says they interact, sometimes destructively, and even contradicts itself on the direction — but always at batch-1, in bespoke single-stream harnesses. This project measures who's right inside vLLM, under continuous batching and realistic concurrency.
+
+- **Reproduction gate: PASS.** Reproduced SpecMQuant's (ACL 2025) finding that weight quantization erodes speculative decoding's benefit, inside vLLM rather than their bespoke C/CUDA harness: EAGLE's speedup over the FP16 baseline dropped from 1.64×→1.26× (GSM8K) and 1.89×→1.37× (HumanEval) once the target model went 4-bit, with accepted length essentially unchanged — confirming the mechanism is economic, not a drop in draft-head accuracy
+- Compute-constrained by design (~40 A100-hours on Colab Pro); every component has to earn its place mechanistically or it doesn't ship
+- **Next up:** the full 2³ interaction matrix (weight quant × KV-cache quant × speculative decoding) across concurrency levels, plus a scoped SGLang comparison on the RAG shared-prefix regime
 
 ---
 
@@ -89,7 +103,7 @@ Standard dense retrievers find semantically similar passages regardless of *when
 ### SquadPlanner
 > *LangGraph · Multi-Agent Systems · FastAPI · MongoDB*
 
-**[Live Demo](https://ai-squad-planner-v2-0.vercel.app/) · [View Project](https://github.com/manojarulmurugan/AI-Squad-Planner)**
+**[Live Demo](https://ai-squad-planner-v2-0.vercel.app/) · [View Project](https://github.com/manojarulmurugan/AI-Squad-Planner-v2.0)**
 
 A stateful multi-agent trip planner for groups. The architecture was designed for efficiency: the entire planning pipeline runs on **only 3 LLM calls**, with parallel tool execution handling the rest.
 
@@ -111,8 +125,9 @@ End-to-end production recommendation system on the REES46 eCommerce dataset (288
 - **PySpark preprocessing** on GCP Dataproc: bot removal, exact + near-dedup, 3-core filtering across 279.9M events → 1.45M training sessions
 - **GRU4Rec V9**: single-layer GRU with event-type embeddings, cosine similarity head (temperature = 0.07), full softmax over 222,864 items; trained on Vertex AI A100 (10h 46m)
 - Scaling from 500k → 1M users produced a consistent **+2.7% NDCG@20** gain
-- **FastAPI serving on Cloud Run** with FAISS ANN search (<500ms); automated concept-drift retraining via Cloud Scheduler + Vertex AI when rolling NDCG@20 drops >15%
-- **MLflow** experiment tracking; live distribution drift monitor (Jensen-Shannon divergence)
+- **FastAPI + FAISS serving on Hugging Face Spaces** (migrated from Cloud Run); profiled the serving path and cut FAISS search latency **11.5×** with an IVFFlat-512 index (94.9% concordance vs. brute-force), and validated dynamic request batching (**8× throughput** at high concurrency)
+- **Weekly re-training pipeline**: JSD drift detection, experience replay, and rolling evaluation, stress-tested through the March 2020 COVID demand shock — best checkpoint lifted NDCG@20 to 0.2714 (+4.7%)
+- **MLflow** experiment tracking (DagsHub); live distribution drift monitor (Jensen-Shannon divergence)
 - SASRec attempted 5 times; all failed on short-session data. Documented as a negative result with literature backing
 
 | Metric | GRU4Rec V9 | T4Rec XLNet (published) | Popularity baseline |
@@ -122,37 +137,55 @@ End-to-end production recommendation system on the REES46 eCommerce dataset (288
 
 ---
 
-### Sales Forecasting + Customer Churn
-> *Time-Series · Classification · Business Analytics*
+### Customer Churn & Retention Analytics
+> *Classification · Time-Series · Business Analytics*
 
-**[View Project](https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-Sales-Data)**
+**[View Project](https://github.com/manojarulmurugan/Customer-Churn-Prediction-Sales-Data)**
 
-- **ARIMA + LSTM** forecasting on a 370,000-record sales dataset with **<5% forecast error**
-- ECDF-based dynamic churn labeling using per customer-product purchase-gap thresholds at the 90th percentile, capturing behavioral heterogeneity without fixed cutoffs
-- **LightGBM + RandomForest** churn prediction at **87% accuracy**
+Churn prediction on 370,000 non-contractual sales transactions from a printing company, where there's no cancellation event to learn from. Forecasting-based and percentile-heuristic churn signals both turn out to be too weak — the project shows why, builds a supervised classifier that works, and connects it to segmentation and CLV for retention prioritization.
+
+- ARIMA/LSTM revenue-forecasting churn flags and ECDF revenue-percentile heuristics both underperform (~50% and ~28% accuracy) — documented as weak baselines rather than used as the labeling method
+- **XGBoost churn classifier: 87% accuracy, 0.89 precision, 0.90 recall**, built on recency/frequency, purchase-consistency, product, and geography features
+- Segmentation and customer lifetime value (CLV) analysis layered on top to prioritize retention spend by risk × value
 
 ---
 
-### Credit Risk Analysis
+### Credit Profit & Risk Analysis
 > *Machine Learning · Ensemble Methods · Fintech*
 
-**[View Project](https://github.com/manojarulmurugan/Credit-Profit-Risk-Analysis)**
+**[Live Demo](https://loan-alpha.streamlit.app/) · [View Project](https://github.com/manojarulmurugan/Credit-Profit-Risk-Analysis)**
 
-- Stacked ensemble (RF + Naive Bayes + SVM + XGBoost) on 30,000 loan records with SMOTE and bootstrapping for class imbalance
-- Profit optimization framing across risk tiers: actionable insights on safe loans and expected return by risk segment
+Reframed from the standard lender accept/reject framing — which hits a structural ceiling since LendingClub already prices default risk into the interest rate — to investor portfolio selection: rank loans by predicted annualized net return rather than predicted default, and measure realized portfolio return.
 
-**97.7% test set accuracy**
+- Beats LendingClub's own grade ordering by **200–460 bp in annualized portfolio return**, validated across four independent out-of-time cohorts (2012–2015), two of them at 100% loan maturity
+- Model stack: XGBoost PD model (AUC 0.712) → LightGBM LGD model → LightGBM-Huber annualized-return model (trained on matured loans only) → discrete-time survival model for IFRS 9 lifetime PD/ECL → portfolio engine
+- Grade-blind and leakage-guarded: `int_rate`/`sub_grade` excluded from features, cashflow columns used only as targets, strict out-of-time validation throughout
+- Deployed as a FastAPI scoring endpoint + Streamlit investor dashboard
 
 ---
 
-## Currently Learning
+## Courses & Books
 
-| Course / Resource | Focus |
+**Completed**
+
+| Course / Book | Provider |
 |---|---|
-| *Principles of Designing AI Agents* by Sam Bhagwat | Agentic architectures, MCP servers, tool design |
-| *Machine Learning in Production* by DeepLearning.ai | MLOps, model monitoring, cloud deployment |
+| Principles of Designing AI Agents | Sam Bhagwat |
+| Neural Networks and Deep Learning | DeepLearning.ai |
+| Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | DeepLearning.ai |
+| Structuring Machine Learning Projects | DeepLearning.ai |
+| Convolutional Neural Networks | DeepLearning.ai |
+| Sequence Models | DeepLearning.ai |
+| Machine Learning in Production | DeepLearning.ai |
+| iOS & Swift - The Complete iOS App Development Bootcamp | Dr. Angela Yu |
+| Data Structures and Algorithms Bootcamp | Jonathan Rasmusson |
 
-Completed: Deep Learning Specialization (DeepLearning.ai)
+**Currently studying**
+
+| Course / Book | Author |
+|---|---|
+| Inference Engineering | Philip Kiely |
+| Ace the Data Science Interview | Nick Singh and Kevin Huo |
 
 ---
 
