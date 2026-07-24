@@ -22,7 +22,7 @@ I care about the full arc: from modeling to deployment, from classical ML to age
 
 > Graduated with my MS this May. Actively looking for full-time roles in **Data Science, ML Engineering, or Applied AI**.
 
-**Currently exploring:** A serving-regime study of how weight quantization, KV-cache quantization, and speculative decoding interact inside vLLM (see below) — the reproduction gate is passed, now building out the full interaction matrix. Also going deeper on LLM fine-tuning with LoRA and QLoRA.
+**Currently exploring:** Going deeper on LLM fine-tuning with LoRA and QLoRA, and following up on a healthcare-data trust layer I built solo in a 16-hour Databricks × Hack-Nation hackathon (see below).
 
 ---
 
@@ -45,7 +45,8 @@ I care about the full arc: from modeling to deployment, from classical ML to age
 
 | Project | What it does | Key Result |
 |---|---|---|
-| [Inference-Optimization Interaction Study](#inference-optimization-interaction-study-vllm) | Stacked quantization + speculative decoding interaction study in vLLM | Reproduction gate: **PASS** (in progress) |
+| [SpecDec-meets-Quant](#specdec-meets-quant) | Do stacked LLM inference optimizations actually compound in vLLM? | **2.97x** interference gap; found & reported a vLLM crash bug |
+| [Healthcare Referral Copilot](#healthcare-referral-copilot) | Evidence-grounded facility search over India's messy healthcare data | 10,077 facilities, 451k evidence bullets, live on Databricks |
 | [Time-Aware RAG](#time-aware-rag) | Temporal retrieval pipeline for "as-of" QA | **Hit@1: 59% vs 40.4% baseline** |
 | [Hallucination Steering](#hallucination-aware-steering) | LLM truthfulness via hidden-state steering | **Hallucination rate: 64.6% → 55.5%** |
 | [SquadPlanner](#squadplanner) | Stateful multi-agent trip planner with LangGraph | Live + deployed |
@@ -55,16 +56,33 @@ I care about the full arc: from modeling to deployment, from classical ML to age
 
 ---
 
-### Inference-Optimization Interaction Study (vLLM)
+### SpecDec-meets-Quant
 > *LLM Serving · Speculative Decoding · Quantization · GPU Optimization*
 
 **[View Project](https://github.com/manojarulmurugan/SpecDecoding-Study-vLLM-SGLang)**
 
-*In progress.* Practitioner guidance says weight quantization, KV-cache quantization, and speculative decoding stack into cleanly compounding serving speedups. Research says they interact, sometimes destructively, and even contradicts itself on the direction — but always at batch-1, in bespoke single-stream harnesses. This project measures who's right inside vLLM, under continuous batching and realistic concurrency.
+Practitioner guidance says weight quantization, KV-cache quantization, and speculative decoding stack into cleanly compounding serving speedups. This project tested that inside vLLM, under continuous batching and realistic concurrency, with a replicated 2³ factorial across 397 serving runs (Llama-3.1-8B, A100) — gated on first reproducing a published single-stream result before trusting any new measurement.
 
-- **Reproduction gate: PASS.** Reproduced SpecMQuant's (ACL 2025) finding that weight quantization erodes speculative decoding's benefit, inside vLLM rather than their bespoke C/CUDA harness: EAGLE's speedup over the FP16 baseline dropped from 1.64×→1.26× (GSM8K) and 1.89×→1.37× (HumanEval) once the target model went 4-bit, with accepted length essentially unchanged — confirming the mechanism is economic, not a drop in draft-head accuracy
-- Compute-constrained by design (~40 A100-hours on Colab Pro); every component has to earn its place mechanistically or it doesn't ship
-- **Next up:** the full 2³ interaction matrix (weight quant × KV-cache quant × speculative decoding) across concurrency levels, plus a scoped SGLang comparison on the RAG shared-prefix regime
+- **They don't compound.** Full-stack speedup trails the naive product of the three levers by up to **2.97×**, and every pairwise interaction is negative across all 12 workload × concurrency cells. The worst cell (GSM8K, concurrency 64) runs *slower* than no optimization at all.
+- **Quality costs add cleanly, unlike speed.** AWQ quantization costs -3 to -8 accuracy points; FP8 KV-cache is ~0; EAGLE-3 under greedy decoding is bit-identical.
+- **FP8-KV is a capacity lever, not a speed lever.** At KV-capacity pressure it doubles the admitted request batch, lifting goodput **+19%** and cutting P95 latency **-21%**.
+- **Found, root-caused to file:line, and reported a real vLLM 0.24.0 bug**: a stale EAGLE-3 checkpoint field crashes compiled-mode long-context serving; diagnosed via per-position GPU instrumentation ([vllm#48894](https://github.com/vllm-project/vllm/issues/48894), open).
+- Shipped a reusable, engine-agnostic benchmark harness (resumable sweeps, process-group-safe vLLM V1 lifecycle, GPU-free test suite) and a provenance-backed [deployment decision guide](https://github.com/manojarulmurugan/SpecDecoding-Study-vLLM-SGLang/blob/main/DECISION_GUIDE.md), where every number traces to a committed per-run record.
+
+---
+
+### Healthcare Referral Copilot
+> *Full-Stack AI · Data Trust & Verification · Databricks*
+
+**[Live Demo](https://data-legend-app-7474656737321234.aws.databricksapps.com) · [View Project](https://github.com/manojarulmurugan/hacknation-referral-copilot)**
+
+Built solo in a 16-hour hackathon (Databricks × Hack-Nation "Data Legend" challenge, San Francisco). Care coordinators searching India's fragmented healthcare-facility data can't easily tell a verified capability from an unverified claim — "this hospital has an ICU" is often just text, not evidence. This app fixes that.
+
+- **5-stage deterministic pipeline** turns 451k noisy free-text claims across 10,077 real facilities into scored, evidence-backed capability data, mapped against a 20-capability taxonomy grounded in WHO SARA + India IPHS 2022 standards
+- **Rejected an LLM-based extraction approach after it failed at scale** (445 of 662 batches errored, covering only 528 of 10,077 facilities) in favor of a deterministic, 100%-coverage rule-based mapper
+- **The LLM never originates a fact**: used only for query-parsing fallback and optional external corroboration, where any quote not verbatim in the retrieved source text is rejected outright
+- Two rounds of external second-opinion code review caught and fixed real bugs in the trust-scoring logic before shipping — an "independent corroboration" rule that wasn't actually independent, and a contradiction-flag statistic that had the wrong denominator
+- **Full-stack and deployed**: composite evidence + geography ranking, Postgres persistence via Databricks Lakebase (OAuth-secured, survives app restarts/redeploys), live on Databricks Apps with Llama-3-3-70B via Databricks Model Serving
 
 ---
 
@@ -218,6 +236,8 @@ Reframed from the standard lender accept/reject framing — which hits a structu
 ![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white)
 ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
